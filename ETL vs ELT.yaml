@@ -1,0 +1,18 @@
+## Availability of data in the system
+- ETL only transforms and loads the data that is required while requirement is gathered .
+  Incase of requiremnt miss some data has to be repulled to the datawarehouse on next release.
+- ELT alrady has most of the data into the same datalake system .
+  Incase of requirement miss it can easily be pulled into the recent dataset.
+## Geneated columns
+- Complex transformations needed to be added for in fly dataset.
+- As most of the ELT is SQL basis , it's easy to generate a calculated column / generated column out of it.
+## Compliance
+- There might be scenario while you need to mask/ avoid source data with sensitive information.
+- ELT solution has to take care of the potential risk of data compliance in the system. Best approach to use ETL in such cases .
+## Data size and complex transformation
+- ETL is good for medium to smaller dataset with huge transformation
+- ELT is good when the volume is huge.
+## Data ready to analysis
+- The data will be gone through multiple transformtion in ETL.
+  Thus it takes time to get the data in ETL but since most of transformtion is already done , it's almost ready to use .
+- Data will be available quicker in ETL but since the data is not cleansed , it needs cleaning before processing .
